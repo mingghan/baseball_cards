@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профили</title>
+</head>
+<body>
+    {% if profiles %}
+    <ul>
+    {% for profile in profiles %}
+        <li><a href="/{{ profile.id }}/">{{ profile.name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>Нет профилей.</p>
+    {% endif %}
+</body>
+</html>

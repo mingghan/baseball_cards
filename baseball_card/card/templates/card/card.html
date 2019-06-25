@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static "card/style.css" %}"  rel="stylesheet" type="text/css" media="all">
+    <title>{{ profile.name }}</title>
+</head>
+<body>
+    <div id="to_main_page">
+        <a href="/">Main menu</a>
+    </div>
+
+    <img class="avatar" src="{{ profile.photo }}">
+    <h1>{{ profile.name }}</h1>
+    <div class="description">
+        <label for="comment"> Описание </label>
+        <div id="comment">{{ profile.comment }}</div>
+
+        <label for="birth_date"> Дата рождения </label>
+        <div id="birth_date">{{ profile.birth_date }}</div>
+
+        <label for="sociotype"> Социотип </label>
+        <div id="sociotype">{{ profile.sociotype }}</div>
+    </div>
+
+    <div id="characteristics">
+        <div class="table-row">
+            <span class="table-col left-col">Рационал</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.thinking }}"></span>
+            <span class="table-col right-col">Иррационал</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Сенсорик</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.sensing }}"></span>
+            <span class="table-col right-col">Интуит</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Экстраверт</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.extraversion }}"></span>
+            <span class="table-col right-col">Интроверт</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Логик</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.judging }}"></span>
+            <span class="table-col right-col">Этик</span>
+        </div>
+
+
+        <div class="table-row">
+            <span class="table-col left-col">Решительность</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.determination }}"></span>
+            <span class="table-col right-col">Рассудительность</span>
+        </div>
+
+
+        <div class="table-row">
+            <span class="table-col left-col">Субъективизм</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.subjectivism }}"></span>
+            <span class="table-col right-col">Объективизм</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Упрямство</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.stubbornness }}"></span>
+            <span class="table-col right-col">Уступчивость</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Беспечность</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.carelessness }}"></span>
+            <span class="table-col right-col">Предусмотрительность</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Результат</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.result }}"></span>
+            <span class="table-col right-col">Процесс</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Конструктивизм</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.constructivism }}"></span>
+            <span class="table-col right-col">Эмотивизм</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Квестимность</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.questimity }}"></span>
+            <span class="table-col right-col">Деклатимность</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Тактика</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.tactics }}"></span>
+            <span class="table-col right-col">Стратегия</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Динамика</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.dynamics }}"></span>
+            <span class="table-col right-col">Статика</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Позитивизм</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.positive }}"></span>
+            <span class="table-col right-col">Негативизм</span>
+        </div>
+
+        <div class="table-row">
+            <span class="table-col left-col">Аристократия</span>
+            <span class="table-col"><input type="range" min="0" max="9" step="1" value="{{ profile.aristocracy }}"></span>
+            <span class="table-col right-col">Демократия</span>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
